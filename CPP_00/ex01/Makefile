@@ -6,7 +6,7 @@
 #    By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/03 00:35:19 by gfredes-          #+#    #+#              #
-#    Updated: 2024/05/03 00:36:15 by gfredes-         ###   ########.fr        #
+#    Updated: 2024/05/04 01:03:05 by gfredes-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,9 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 CLEAN = rm -f
 
-SRC = 
+SRC = Contact.cpp \
+		main.cpp \
+		PhoneBook.cpp
 
 OBJT = $(patsubst %.cpp, %.o, $(SRC))
 

@@ -6,16 +6,13 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 23:32:12 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/05/04 00:12:26 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/05/04 01:05:48 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
-Contact::Contact(/* args */)
-{
-}
+Contact::Contact(){};
 
-Contact::~Contact()
-{
-}
+Contact::~Contact(){};
+

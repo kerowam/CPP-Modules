@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 23:32:28 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/05/04 00:20:49 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/05/04 00:55:13 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 class Contact
 {
 private:
-	int	index;
+
 public:
 	Contact();
 	~Contact();
