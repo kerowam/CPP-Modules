@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 23:30:53 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/05/04 00:22:16 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/05/04 02:58:20 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PHONEBOOK_H
 # include "Contact.hpp"
 # include <iostream>
+# include <iomanip>
 
 class PhoneBook
 {
