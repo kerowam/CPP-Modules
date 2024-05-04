@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 22:20:16 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/05/05 01:09:21 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/05/05 01:17:48 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,9 @@ Account::Account(int initial_deposit)
 
 Account::~Account()
 {
-
+	Account::_displayTimestamp();
+	std::cout << "index:" << BLUE << Account::_accountIndex << RESET;
+	std::cout << ";amount:" << BLUE << Account::_amount << RESET << ";closed" << std::endl;
 }
 
 int	Account::getNbAccounts( void )
@@ -127,9 +129,7 @@ void	Account::_displayTimestamp( void )
 	char		buffer[19];
 
 	time(&date);
-	//std::cout << "date: " << date << std::endl;
 	timestamp = localtime(&date);
-	//std::cout << "timestamp: " << timestamp << std::endl;
 	strftime(buffer, 19, "[%G%m%d_%H%M%S] ", timestamp);
 	std::cout << buffer;
 }
