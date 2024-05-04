@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 22:20:16 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/05/05 00:53:31 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/05/05 01:09:21 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,12 +88,27 @@ void	Account::makeDeposit( int deposit )
 
 bool	Account::makeWithdrawal( int withdrawal )
 {
-
-
+	Account::_displayTimestamp();
+	std::cout << "index:" << BLUE << Account::_accountIndex << RESET;
+	std::cout << ";p_amount:" << BLUE << Account::_amount << RESET;
+	if (withdrawal > checkAmount())
+	{
+		std::cout << ";withdrawal:refused" << std::endl;
+		return false;
+	}
+	std::cout << ";withdrawal:" << BLUE << withdrawal << RESET;
+	Account::_amount -= withdrawal;
+	_totalAmount -= withdrawal;
+	Account::_nbWithdrawals++;
+	_totalNbWithdrawals++;
+	std::cout << ";amount:" << BLUE << Account::_amount << RESET;
+	std::cout << ";nb_withdrawals:" << BLUE << Account::_nbWithdrawals << RESET;
+	std::cout << std::endl;
+	return true;
 }
 int		Account::checkAmount( void ) const
 {
-
+	return _amount;
 }
 
 void	Account::displayStatus( void ) const
