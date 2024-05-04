@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 22:20:16 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/05/05 00:27:06 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/05/05 00:53:31 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,32 +45,45 @@ Account::~Account()
 
 int	Account::getNbAccounts( void )
 {
-
+	return _nbAccounts;
 }
 int	Account::getTotalAmount( void )
 {
-
+	return _totalAmount;
 }
 int	Account::getNbDeposits( void )
 {
-
+	return _totalNbDeposits;
 }
 int	Account::getNbWithdrawals( void )
 {
-
+	return _totalNbWithdrawals;
 }
 void	Account::displayAccountsInfos( void )
 {
 	Account::_displayTimestamp();
-	std::cout << "accounts:" << BLUE << _nbAccounts << RESET << ";total:";
-	std::cout << BLUE << _totalAmount << RESET << ";deposits:";
-	std::cout << BLUE << _totalNbDeposits << RESET << ";withdrawals:";
-	std::cout << BLUE << _totalNbWithdrawals << RESET << std::endl;
+	std::cout << "accounts:" << BLUE << getNbAccounts() << RESET << ";total:";
+	std::cout << BLUE << getTotalAmount() << RESET << ";deposits:";
+	std::cout << BLUE << getNbDeposits() << RESET << ";withdrawals:";
+	std::cout << BLUE << getNbWithdrawals() << RESET << std::endl;
 }
 
 void	Account::makeDeposit( int deposit )
 {
-
+	Account::_displayTimestamp();
+	std::cout << "index:" << BLUE << Account::_accountIndex << RESET;
+	std::cout << ";p_amount:" << BLUE << Account::_amount << RESET;
+	std::cout << ";deposit:" << BLUE << deposit << RESET;
+	Account::_amount += deposit;
+	_totalAmount += deposit;
+	if (deposit != 0)
+	{
+		Account::_nbDeposits++;
+		_totalNbDeposits++;
+	}
+	std::cout << ";amount:" << BLUE << Account::_amount << RESET;
+	std::cout << ";nb_deposits:" << BLUE << Account::_nbDeposits << RESET;
+	std::cout << std::endl;
 }
 
 bool	Account::makeWithdrawal( int withdrawal )
