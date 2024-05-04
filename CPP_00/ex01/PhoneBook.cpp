@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 23:30:41 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/05/04 03:39:12 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/05/04 03:50:24 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@ PhoneBook::PhoneBook()
 	nbr_of_contacts = 0;
 }
 
-PhoneBook::~PhoneBook()
-{
-}
+PhoneBook::~PhoneBook(){};
 
 void	PhoneBook::add_contact()
 {
@@ -32,8 +30,6 @@ void	PhoneBook::add_contact()
 
 void	PhoneBook::search_contact()
 {
-	//std::cout << "Searching Contact..." << std::endl;
-
 	if (this->contact[0].first_name.empty())
 		std::cout << "Your Phonebook is empty. You can ADD a new one." << std::endl;
 	else
