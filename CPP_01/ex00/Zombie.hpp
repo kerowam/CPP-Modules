@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 03:34:00 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/05/06 18:33:03 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/05/06 18:42:03 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ class Zombie
 		std::string _name;
 	
 	public:
-		//Zombie();
 		Zombie(std::string name);
 		~Zombie();
 		void announce(void);

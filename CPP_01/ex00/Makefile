@@ -6,11 +6,11 @@
 #    By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/06 03:33:24 by gfredes-          #+#    #+#              #
-#    Updated: 2024/05/06 18:30:49 by gfredes-         ###   ########.fr        #
+#    Updated: 2024/05/06 18:39:10 by gfredes-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = brain
+NAME = brainz
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
