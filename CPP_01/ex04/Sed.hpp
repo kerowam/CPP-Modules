@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.hpp                                         :+:      :+:    :+:   */
+/*   Sed.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/07 01:15:43 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/05/08 22:19:43 by gfredes-         ###   ########.fr       */
+/*   Created: 2024/05/13 23:38:43 by gfredes-          #+#    #+#             */
+/*   Updated: 2024/05/14 02:13:05 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANB_HPP
-# define HUMANB_HPP
+#ifndef SED_HPP
+# define SED_HPP
 # include <iostream>
-# include <cstring>
-# include "Weapon.hpp"
-class HumanB
+# include <string>
+# include <fstream>
+
+class	Sed
 {
 	public:
-		std::string name;
-		Weapon *weapon;
-		HumanB();
-		HumanB(std::string name);
-		~HumanB();
-		void attack();
-		void setWeapon(Weapon &new_weapon);
+		Sed();
+		~Sed();
+		bool			string_replace(std::string filename, std::string s1, std::string s2);
+
+	private:
+		std::fstream	_inFile;
+		std::fstream	_outFile;
 };
 
 #endif

@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/07 01:15:43 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/05/08 22:19:43 by gfredes-         ###   ########.fr       */
+/*   Created: 2024/05/14 16:08:58 by gfredes-          #+#    #+#             */
+/*   Updated: 2024/05/14 17:14:06 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANB_HPP
-# define HUMANB_HPP
-# include <iostream>
-# include <cstring>
-# include "Weapon.hpp"
-class HumanB
-{
-	public:
-		std::string name;
-		Weapon *weapon;
-		HumanB();
-		HumanB(std::string name);
-		~HumanB();
-		void attack();
-		void setWeapon(Weapon &new_weapon);
-};
+#include "Harl.hpp"
 
-#endif
+int	main(int argc, char *argv[])
+{
+	if (argc != 2)
+	{
+		std::cout << "Wrong number of arguments!" << std::endl;
+		std::cout << "Program use: ./harlFilter <typo_of_complain>" << std::endl; 
+	}
+	else
+	{
+		Harl		harl;
+		std::string	level;
+
+		level += argv[1];
+		harl.complain(level);
+	}
+}
