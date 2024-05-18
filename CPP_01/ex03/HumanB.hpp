@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 01:15:43 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/05/08 22:19:43 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/05/18 22:49:06 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,11 @@
 # include "Weapon.hpp"
 class HumanB
 {
+	private:
+		std::string _name;
+		Weapon *_weapon;
+
 	public:
-		std::string name;
-		Weapon *weapon;
 		HumanB();
 		HumanB(std::string name);
 		~HumanB();
