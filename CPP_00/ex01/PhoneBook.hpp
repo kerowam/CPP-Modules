@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 23:30:53 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/05/04 02:58:20 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/05/18 22:46:32 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@
 class PhoneBook
 {
 private:
+	int	nbr_of_contacts;
+	Contact	contact[8];
 
 public:
 	PhoneBook();
 	~PhoneBook();
 
-	int	nbr_of_contacts;
-	Contact	contact[8];
 
 	void add_contact();
 	void search_contact();
