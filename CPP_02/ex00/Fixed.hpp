@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 01:09:44 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/05/28 01:26:30 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/05/28 01:54:06 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ class	Fixed
 	
 	public:
 		Fixed();
-		Fixed(const Fixed& fixed_name);
+		Fixed(const Fixed& fixed_instance);
 		~Fixed();
-		const Fixed& operator=(const Fixed& fixed_name);
+		const Fixed& operator=(const Fixed& fixed_instance);
 
-		int		getRawBits(void);
+		int		getRawBits(void) const;
 		void	setRawBits(int const raw);
 
 };
