@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 22:40:07 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/05/31 02:09:27 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/05/31 17:34:17 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,6 @@ class	Point
 	private:
 		Fixed const	_x;
 		Fixed const	_y;
-		
-		//void	_setX(const Point point);
-		//void	_setY(Fixed const y);
 
 	public:
 		Point();
@@ -36,7 +33,7 @@ class	Point
 		Fixed	getY(void) const;
 };
 
+std::ostream& operator<<(std::ostream& outstream, const Point& point);
 bool	bsp( Point const a, Point const b, Point const c, Point const point);
-
 
 #endif
