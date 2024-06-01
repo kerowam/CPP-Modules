@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 02:12:34 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/06/01 03:46:48 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/06/01 15:54:32 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ ClapTrap::ClapTrap(std::string name): _name(name), _hit_points(10), _energy_poin
 	std::cout << "Constructor called!" << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap& CT_name):
-_name(CT_name._name), _hit_points(CT_name._hit_points), _energy_points(CT_name._energy_points), _attack_damage(CT_name._attack_damage)
+ClapTrap::ClapTrap(const ClapTrap& CT_instance):
+_name(CT_instance._name), _hit_points(CT_instance._hit_points), _energy_points(CT_instance._energy_points), _attack_damage(CT_instance._attack_damage)
 {
 	std::cout << "Copy constructor called!" << std::endl;
 }
@@ -34,14 +34,14 @@ ClapTrap::~ClapTrap()
 
 }
 
-ClapTrap&	ClapTrap::operator=(const ClapTrap& CT_name)
+ClapTrap&	ClapTrap::operator=(const ClapTrap& CT_instance)
 {
-	if (this != &CT_name)
+	if (this != &CT_instance)
 	{
-		this->_name = CT_name._name;
-		this->_hit_points = CT_name._hit_points;
-		this->_energy_points = CT_name._energy_points;
-		this->_attack_damage = CT_name._attack_damage;
+		this->_name = CT_instance._name;
+		this->_hit_points = CT_instance._hit_points;
+		this->_energy_points = CT_instance._energy_points;
+		this->_attack_damage = CT_instance._attack_damage;
 	}
 	return *this;
 }

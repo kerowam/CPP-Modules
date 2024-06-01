@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 02:12:13 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/06/01 03:46:27 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/06/01 16:57:28 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,25 @@
 
 int	main(void)
 {
-	ClapTrap	cp_tp1("Clap");
-	ClapTrap	cp_tp2("Trap");
+	ClapTrap	CT_instance_1("Clap");
+	ClapTrap	CT_instance_2("Trap");
 
-	cp_tp1.attack("Trap");
-	cp_tp2.takeDamage(5);
-	cp_tp2.beRepaired(3);
-	cp_tp1.attack("Trap");
-	cp_tp2.takeDamage(5);
-	cp_tp1.attack("Trap");
-	cp_tp2.takeDamage(5);
-	cp_tp1.attack("Trap");
-	cp_tp1.beRepaired(2);
-	cp_tp2.beRepaired(3);
-	cp_tp2.attack("Clap");
-	cp_tp1.attack("Trap");
-	cp_tp1.attack("Trap");
-	cp_tp1.attack("Trap");
-	cp_tp1.attack("Trap");
-	cp_tp1.attack("Trap");
-	cp_tp1.attack("Trap");
-	cp_tp1.beRepaired(2);
+	CT_instance_1.attack("Trap");
+	CT_instance_2.takeDamage(5);
+	CT_instance_2.beRepaired(3);
+	CT_instance_1.attack("Trap");
+	CT_instance_2.takeDamage(5);
+	CT_instance_1.attack("Trap");
+	CT_instance_2.takeDamage(5);
+	CT_instance_1.attack("Trap");
+	CT_instance_1.beRepaired(2);
+	CT_instance_2.beRepaired(3);
+	CT_instance_2.attack("Clap");
+	CT_instance_1.attack("Trap");
+	CT_instance_1.attack("Trap");
+	CT_instance_1.attack("Trap");
+	CT_instance_1.attack("Trap");
+	CT_instance_1.attack("Trap");
+	CT_instance_1.attack("Trap");
+	CT_instance_1.beRepaired(2);
 }
