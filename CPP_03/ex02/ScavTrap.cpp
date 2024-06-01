@@ -6,12 +6,11 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 03:52:05 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/06/02 01:11:01 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/06/02 01:18:34 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
-//#include "ClapTrap.hpp"
 
 ScavTrap::ScavTrap(): ClapTrap()
 {
