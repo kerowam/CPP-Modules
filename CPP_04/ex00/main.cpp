@@ -6,18 +6,20 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 02:33:38 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/06/12 00:16:13 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/06/12 01:05:28 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 #include "Dog.hpp"
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 
 int	main(void)
 {
-	const Animal	*meta = new Animal();
+	const WrongAnimal	*meta = new WrongAnimal();
 	const Animal	*j = new Dog();
-	const Animal	*i = new Cat();
+	const WrongAnimal	*i = new WrongCat();
 
 	std::cout << j->getType() << " " << std::endl;
 	std::cout << i->getType() << " " << std::endl;
