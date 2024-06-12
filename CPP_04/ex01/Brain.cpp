@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/12 00:44:55 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/06/12 14:59:08 by gfredes-         ###   ########.fr       */
+/*   Created: 2024/06/12 19:10:08 by gfredes-          #+#    #+#             */
+/*   Updated: 2024/06/12 19:20:07 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGANIMAL_HPP
-# define WRONGANIMAL_HPP
-# include <iostream>
+#include "Brain.hpp"
 
-class WrongAnimal
+Brain::Brain()
 {
-	private:
 
-	protected:
-		std::string	type;
+}
 
-	public:
-		WrongAnimal();
-		WrongAnimal(std::string wrong_animal_type);
-		WrongAnimal(const WrongAnimal& instance);
-		virtual ~WrongAnimal();
+Brain::Brain(Brain& instance)
+{
 
-		WrongAnimal&	operator=(const WrongAnimal& instance);
-		virtual void	makeSound() const;
-		std::string		getType() const;
-};
+}
 
-#endif
+Brain::~Brain()
+{
+
+}
+
+Brain&	Brain::operator=(Brain& instance)
+{
+
+}

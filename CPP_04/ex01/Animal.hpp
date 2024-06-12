@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/12 00:44:55 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/06/12 14:59:08 by gfredes-         ###   ########.fr       */
+/*   Created: 2024/06/05 02:34:07 by gfredes-          #+#    #+#             */
+/*   Updated: 2024/06/12 14:53:50 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGANIMAL_HPP
-# define WRONGANIMAL_HPP
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 # include <iostream>
 
-class WrongAnimal
+class Animal
 {
 	private:
 
@@ -22,12 +22,12 @@ class WrongAnimal
 		std::string	type;
 
 	public:
-		WrongAnimal();
-		WrongAnimal(std::string wrong_animal_type);
-		WrongAnimal(const WrongAnimal& instance);
-		virtual ~WrongAnimal();
+		Animal();
+		Animal(std::string animal_type);
+		Animal(const Animal& instance);
+		virtual ~Animal();
 
-		WrongAnimal&	operator=(const WrongAnimal& instance);
+		Animal&			operator=(const Animal& instance);
 		virtual void	makeSound() const;
 		std::string		getType() const;
 };

@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/12 00:44:55 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/06/12 14:59:08 by gfredes-         ###   ########.fr       */
+/*   Created: 2024/06/05 02:34:55 by gfredes-          #+#    #+#             */
+/*   Updated: 2024/06/12 19:21:56 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGANIMAL_HPP
-# define WRONGANIMAL_HPP
+#ifndef DOG_HPP
+# define DOG_HPP
 # include <iostream>
+# include "Animal.hpp"
+# include "Brain.hpp"
 
-class WrongAnimal
+class Dog: public Animal
 {
 	private:
-
-	protected:
-		std::string	type;
+		Brain*	_dog_brain;
 
 	public:
-		WrongAnimal();
-		WrongAnimal(std::string wrong_animal_type);
-		WrongAnimal(const WrongAnimal& instance);
-		virtual ~WrongAnimal();
+		Dog();
+		Dog(std::string name);
+		Dog(const Dog& instance);
+		~Dog();
 
-		WrongAnimal&	operator=(const WrongAnimal& instance);
-		virtual void	makeSound() const;
-		std::string		getType() const;
+		Dog&	operator=(const Dog& instance);
+		void	makeSound() const;
 };
 
 #endif
