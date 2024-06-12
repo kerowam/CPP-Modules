@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 02:34:55 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/06/12 00:15:04 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/06/12 19:47:14 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ class Dog: public Animal
 {
 	public:
 		Dog();
-		Dog(std::string name);
 		Dog(const Dog& instance);
 		~Dog();
 
