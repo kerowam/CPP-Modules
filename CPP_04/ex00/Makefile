@@ -6,11 +6,11 @@
 #    By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/05 02:33:17 by gfredes-          #+#    #+#              #
-#    Updated: 2024/06/05 02:36:22 by gfredes-         ###   ########.fr        #
+#    Updated: 2024/06/12 14:13:34 by gfredes-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Polimorphism
+NAME = polimorphism
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
@@ -20,6 +20,8 @@ SRC =	main.cpp \
 		Animal.cpp \
 		Cat.cpp \
 		Dog.cpp \
+		WrongAnimal.cpp \
+		WrongCat.cpp
 		
 OBJT = $(patsubst %.cpp, %.o, $(SRC))
 

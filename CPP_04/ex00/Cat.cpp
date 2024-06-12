@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 02:34:44 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/06/12 00:14:25 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/06/12 13:45:14 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Cat::Cat(): Animal("Cat")
 {
-	std::cout << "Default Cat constructed." << std::endl;
+	std::cout << "Cat constructed." << std::endl;
 }
 
 Cat::Cat(const Cat& instance)

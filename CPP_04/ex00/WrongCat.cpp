@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 00:46:01 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/06/12 00:54:03 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/06/12 13:47:17 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 WrongCat::WrongCat(): WrongAnimal("WrongCat")
 {
-	std::cout << "Default WrongCat constructed." << std::endl;
+	std::cout << "WrongCat constructed." << std::endl;
 }
 
 WrongCat::WrongCat(const WrongCat& instance)

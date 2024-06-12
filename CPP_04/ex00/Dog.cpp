@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 02:35:04 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/06/12 00:14:48 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/06/12 13:44:03 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Dog::Dog(): Animal("Dog")
 {
-	std::cout << "Default Dog constructed." << std::endl;
+	std::cout << "Dog constructed." << std::endl;
 }
 
 Dog::Dog(const Dog& instance)
@@ -25,7 +25,7 @@ Dog::Dog(const Dog& instance)
 
 Dog::~Dog()
 {
-	std::cout << "Cat destroyed." << std::endl;
+	std::cout << "Dog destroyed." << std::endl;
 }
 
 Dog&	Dog::operator=(const Dog& instance)
