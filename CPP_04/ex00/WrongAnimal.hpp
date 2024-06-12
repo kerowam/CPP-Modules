@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 00:44:55 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/06/12 00:58:40 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/06/12 14:54:48 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class WrongAnimal
 		WrongAnimal();
 		WrongAnimal(std::string wrong_animal_type);
 		WrongAnimal(const WrongAnimal& instance);
-		~WrongAnimal();
+		virtual ~WrongAnimal();
 
 		WrongAnimal&		operator=(const WrongAnimal& instance);
 		virtual void	makeSound() const;

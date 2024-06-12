@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 02:34:07 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/06/12 00:17:19 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/06/12 14:53:50 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Animal
 		Animal();
 		Animal(std::string animal_type);
 		Animal(const Animal& instance);
-		~Animal();
+		virtual ~Animal();
 
 		Animal&			operator=(const Animal& instance);
 		virtual void	makeSound() const;
