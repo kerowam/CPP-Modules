@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 20:59:17 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/06/12 21:19:04 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/06/12 23:31:13 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,21 @@
 
 class AMateria
 {
-private:
-	
-protected:
+	private:
 
-public:
-	AMateria();
-	AMateria(AMateria& instance);
-	~AMateria();
-	AMateria(std::string const & type);
+	protected:
+		std::string	_type;
 
-	AMateria&			operator=(AMateria& instance);
-	std::string	const	& getType() const;
-	virtual AMateria*	clone() const = 0;
-	virtual void		use(ICharacter& target);
+	public:
+		AMateria();
+		AMateria(AMateria& instance);
+		~AMateria();
+		AMateria(std::string const & type);
+
+		AMateria&			operator=(AMateria& instance);
+		std::string	const	& getType() const;
+		virtual AMateria*	clone() const = 0;
+		virtual void		use(ICharacter& target);
 };
 
 #endif
