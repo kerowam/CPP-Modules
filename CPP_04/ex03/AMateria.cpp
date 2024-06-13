@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 20:59:27 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/06/13 13:43:27 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/06/13 16:28:12 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ AMateria&			AMateria::operator=(AMateria& instance)
 {
 	if (this != &instance)
 	{
-		//delete(this);
+		delete(this);
 		AMateria *other_materia = instance.clone();
 		return *other_materia;
 	}
@@ -43,5 +43,5 @@ std::string	const	& AMateria::getType() const
 
 void		AMateria::use(ICharacter& target)
 {
-
+	(void) target;
 }

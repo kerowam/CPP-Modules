@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 20:59:17 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/06/12 23:31:13 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/06/13 16:30:39 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define AMATERIA_HPP
 # include <iostream>
 # include "ICharacter.hpp"
+
+class ICharacter;
 
 class AMateria
 {
@@ -25,8 +27,8 @@ class AMateria
 	public:
 		AMateria();
 		AMateria(AMateria& instance);
-		~AMateria();
 		AMateria(std::string const & type);
+		virtual ~AMateria();
 
 		AMateria&			operator=(AMateria& instance);
 		std::string	const	& getType() const;

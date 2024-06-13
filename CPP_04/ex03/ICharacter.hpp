@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 21:02:01 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/06/12 21:35:50 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/06/13 16:31:07 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define ICHARACTER_HPP
 # include <iostream>
 # include "AMateria.hpp"
+
+class AMateria;
 
 class ICharacter
 {
