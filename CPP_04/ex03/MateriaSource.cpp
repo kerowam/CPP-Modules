@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 21:03:44 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/06/13 16:31:55 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/06/18 16:40:57 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,13 @@ void			MateriaSource::learnMateria(AMateria* m)
 	while (i < 4 && this->_materias[i])
 		i++;
 	if (i < 4)
+	{
 		this->_materias[i] = m;
+		return;
+	}
 	else
 		std::cout << "No space left to learn a new materia! Nothing happens!" << std::endl;
+	delete (m);
 }
 
 AMateria*		MateriaSource::createMateria(std::string const & type)
