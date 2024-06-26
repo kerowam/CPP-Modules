@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 00:44:55 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/06/12 14:59:08 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/06/26 22:53:52 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class WrongAnimal
 		virtual ~WrongAnimal();
 
 		WrongAnimal&	operator=(const WrongAnimal& instance);
-		virtual void	makeSound() const;
+		void	makeSound() const;
 		std::string		getType() const;
 };
 
