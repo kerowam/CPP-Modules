@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 17:54:08 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/07/23 18:16:42 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/07/23 20:12:30 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,13 @@ class	Bureaucrat
 	public:
 
 		Bureaucrat();
+		Bureaucrat(const std::string name, int grade);
 		Bureaucrat(const Bureaucrat& instance);
 		Bureaucrat&	operator=(const Bureaucrat& instance);
 		~Bureaucrat();
 
-		const std::string	getName();
-		int					get_Grade();
+		const std::string	getName()const;
+		int					getGrade()const;
 		void				increment();
 		void				decrement();
 
