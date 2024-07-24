@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 17:54:13 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/07/23 20:15:00 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/07/24 14:20:45 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,9 +62,9 @@ void	Bureaucrat::increment()
 {
 	try
 	{
-		this->_grade--;
-		if (this->_grade < 1)
+		if (this->_grade <= 1)
 			throw Bureaucrat::GradeTooHighException();
+		this->_grade--;
 	}
 	catch(std::exception& e)
 	{
@@ -76,9 +76,9 @@ void	Bureaucrat::decrement()
 {
 	try
 	{
-		this->_grade++;
-		if (this->_grade > 150)
+		if (this->_grade >= 150)
 			throw Bureaucrat::GradeTooLowException();
+		this->_grade++;
 	}
 	catch(std::exception& e)
 	{
