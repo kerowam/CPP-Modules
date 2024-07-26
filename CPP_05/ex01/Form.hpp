@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 14:26:16 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/07/24 15:08:14 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/07/26 21:05:28 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 # include <iostream>
 # include <exception>
 # include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class Form
 {
@@ -31,10 +33,10 @@ class Form
 		Form& operator=(const Form& instance);
 		~Form();
 
-		const std::string	getName();
-		bool				getIsSignde();
-		const int			getSignGradeRequired();
-		const int			getExecGradeRequired();
+		const std::string	getName()const;
+		bool				getIsSigned()const;
+		const int			getSignGradeRequired()const;
+		const int			getExecGradeRequired()const;
 		void				beSigned(const Bureaucrat& instance);
 
 		class GradeTooHighException: public std::exception

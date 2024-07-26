@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 17:54:13 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/07/24 15:04:44 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/07/26 20:53:09 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,5 +104,10 @@ std::ostream& operator<<(std::ostream& outstream, const Bureaucrat& instance)
 
 void	Bureaucrat::signForm(Form& instance)
 {
-
+	instance.beSigned(*this);
+	if (this->getGrade() <= instance.getSignGradeRequired())
+		std::cout << this->getName() << " signed " << instance.getName() << std::endl;
+	else
+		std::cout << this->getName() << " couldn't sign " << instance.getName() << " because bureaucrat grade is too low." << std::endl;
+		
 }

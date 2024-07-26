@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 17:54:08 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/07/24 15:04:10 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/07/26 20:54:33 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 # include <iostream>
 # include <exception>
 # include "Form.hpp"
+
+class Form;
 
 class	Bureaucrat
 {
