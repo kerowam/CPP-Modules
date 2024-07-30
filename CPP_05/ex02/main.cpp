@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 17:52:53 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/07/30 18:31:05 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/07/30 19:06:15 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,4 +62,8 @@ int	main(void)
 	bureaucrat_2.executeForm(*presidential_form);
 	bureaucrat_3.executeForm(*presidential_form);
 	bureaucrat_4.executeForm(*presidential_form);
+
+	delete(shrubbery_form);
+	delete(robotomy_form);
+	delete(presidential_form);
 }
