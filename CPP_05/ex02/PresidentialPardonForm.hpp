@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 18:42:46 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/07/29 19:14:47 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/07/30 17:05:58 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class PresidentialPardonForm: public AForm
 	public:
 
 		PresidentialPardonForm();
-		PresidentialPardonForm(const std::string& name);
+		PresidentialPardonForm(const std::string& target);
 		PresidentialPardonForm(const PresidentialPardonForm& instance);
 		~PresidentialPardonForm();
 		PresidentialPardonForm& operator=(const PresidentialPardonForm& instance);
@@ -33,6 +33,6 @@ class PresidentialPardonForm: public AForm
 			public:
 				const char *what()const throw();
 		};
-}
+};
 
 #endif

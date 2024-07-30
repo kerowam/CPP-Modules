@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 14:26:16 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/07/29 18:55:23 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/07/30 17:18:56 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,9 @@ class AForm
 		bool				_is_signed;
 		const int			_sign_grade_required;
 		const int			_exec_grade_required;
+
+	protected:
+		std::string	_target;
 
 	public:
 		AForm();
@@ -54,6 +57,6 @@ class AForm
 		};
 };
 
-std::ostream& operator<<(std::ostream& outstream, const Form& instance);
+std::ostream& operator<<(std::ostream& outstream, const AForm& instance);
 
 #endif

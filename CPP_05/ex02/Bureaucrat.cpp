@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 17:54:13 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/07/26 20:53:09 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/07/30 18:21:20 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ Bureaucrat::Bureaucrat(const std::string name, int grade): _name(name), _grade(g
 	}
 	catch(std::exception& e)
 	{
-		std::cerr << e.what() << grade << std::endl;
+		std::cerr << e.what() << name << ": " << grade << std::endl;
 	}
 }
 
@@ -102,7 +102,7 @@ std::ostream& operator<<(std::ostream& outstream, const Bureaucrat& instance)
 	return outstream;
 }
 
-void	Bureaucrat::signForm(Form& instance)
+void	Bureaucrat::signForm(AForm& instance)
 {
 	instance.beSigned(*this);
 	if (this->getGrade() <= instance.getSignGradeRequired())
@@ -110,4 +110,17 @@ void	Bureaucrat::signForm(Form& instance)
 	else
 		std::cout << this->getName() << " couldn't sign " << instance.getName() << " because bureaucrat grade is too low." << std::endl;
 		
+}
+
+void	Bureaucrat::executeForm(AForm const & form)
+{
+	try
+	{
+		form.execute(*this);
+		std::cout << this->getName() << " executed " << form.getName() << std::endl;
+	}
+	catch (const std::exception &e)
+	{
+		std::cerr << this->getName() << " can't execute " << form.getName() << std::endl;
+	}
 }

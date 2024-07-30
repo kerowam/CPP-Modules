@@ -6,26 +6,26 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 14:26:38 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/07/29 18:55:43 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/07/30 17:12:46 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Form.hpp"
+#include "AForm.hpp"
 
-Form::Form(): _name("Default"), _is_signed(false), _sign_grade_required(150), _exec_grade_required(150)
+AForm::AForm(): _name("Default"), _is_signed(false), _sign_grade_required(150), _exec_grade_required(150)
 {
 
 }
 
-Form::Form(std::string name, int sign_grade_required, int exec_grade_required)
+AForm::AForm(std::string name, int sign_grade_required, int exec_grade_required)
 : _name(name), _is_signed(false), _sign_grade_required(sign_grade_required), _exec_grade_required(exec_grade_required)
 {
 	try
 	{
 		if (sign_grade_required < 1 || exec_grade_required < 1)
-			throw Form::GradeTooHighException();
+			throw AForm::GradeTooHighException();
 		else if (sign_grade_required > 150 || exec_grade_required > 150)
-			throw Form::GradeTooLowException();
+			throw AForm::GradeTooLowException();
 	}
 	catch(const std::exception& e)
 	{
@@ -52,47 +52,47 @@ Form::Form(std::string name, int sign_grade_required, int exec_grade_required)
 	}*/
 }
 
-Form::Form(const Form& instance): _name(instance._name), _is_signed(instance._is_signed),
+AForm::AForm(const AForm& instance): _name(instance._name), _is_signed(instance._is_signed),
 	_sign_grade_required(instance._sign_grade_required), _exec_grade_required(instance._exec_grade_required)
 {
 	
 }
 
-Form& Form::operator=(const Form& instance)
+AForm& AForm::operator=(const AForm& instance)
 {
 	if (this != &instance)
 		this->_is_signed = instance.getIsSigned();
 	return *this;
 }
 
-Form::~Form() {}
+AForm::~AForm() {}
 
-const std::string	Form::getName()const
+const std::string	AForm::getName()const
 {
 	return this->_name;
 }
 
-bool	Form::getIsSigned()const
+bool	AForm::getIsSigned()const
 {
 	return this->_is_signed;
 }
 
-const int	Form::getSignGradeRequired()const
+const int	AForm::getSignGradeRequired()const
 {
 	return this->_sign_grade_required;
 }
 
-const int	Form::getExecGradeRequired()const
+const int	AForm::getExecGradeRequired()const
 {
 	return this->_exec_grade_required;
 }
 
-void	Form::beSigned(const Bureaucrat& instance)
+void	AForm::beSigned(const Bureaucrat& instance)
 {
 	try
 	{
 		if (instance.getGrade() > this->getSignGradeRequired())
-			throw Form::GradeTooLowException();
+			throw AForm::GradeTooLowException();
 		this->_is_signed = true;
 	}
 	catch (const std::exception& e)
@@ -101,26 +101,21 @@ void	Form::beSigned(const Bureaucrat& instance)
 	}
 }
 
-const char	*Form::GradeTooHighException::what()const throw()
+const char	*AForm::GradeTooHighException::what()const throw()
 {
 	return "Error: Form grade is too high! ";
 }
 
-const char	*Form::GradeTooLowException::what()const throw()
+const char	*AForm::GradeTooLowException::what()const throw()
 {
 	return "Error: Form grade is too low! ";
 }
 
-std::ostream& operator<<(std::ostream& outstream, const Form& instance)
+std::ostream& operator<<(std::ostream& outstream, const AForm& instance)
 {
 	outstream << "Form name: " << instance.getName() << std::endl;
 	outstream << "Form signature: " << instance.getIsSigned() << std::endl;
 	outstream << "Form signature grade required: " << instance.getSignGradeRequired() << std::endl;
 	outstream << "Form execution grade required: " << instance.getExecGradeRequired() << std::endl;
 	return outstream;
-}
-
-virtual void	AForm::execute(Bureaucrat const & executor) const
-{
-
 }

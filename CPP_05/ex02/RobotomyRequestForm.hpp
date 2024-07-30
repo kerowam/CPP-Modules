@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 18:41:44 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/07/29 19:16:49 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/07/30 17:06:07 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class RobotomyRequestForm: public AForm
 	public:
 
 		RobotomyRequestForm();
-		RobotomyRequestForm(const std::string& name);
+		RobotomyRequestForm(const std::string& target);
 		RobotomyRequestForm(const RobotomyRequestForm& instance);
 		~RobotomyRequestForm();
 		RobotomyRequestForm& operator=(const RobotomyRequestForm& instance);
@@ -33,6 +33,6 @@ class RobotomyRequestForm: public AForm
 			public:
 				const char *what()const throw();
 		};
-}
+};
 
 #endif
