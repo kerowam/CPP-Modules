@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 17:52:53 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/07/30 18:31:05 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/07/30 20:17:02 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,51 +15,15 @@
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
+#include "Intern.hpp"
 
 int	main(void)
 {
-	Bureaucrat	bureaucrat_1("Paco", 150);
-	Bureaucrat	bureaucrat_2("Luis", 1);
-	Bureaucrat	bureaucrat_3("Pepe", 200);
-	Bureaucrat	bureaucrat_4("Patri", 75);
-	AForm		*shrubbery_form = new ShrubberyCreationForm("Shrubbery_form");
-	AForm		*robotomy_form = new RobotomyRequestForm("Robotomy_form");
-	AForm		*presidential_form = new PresidentialPardonForm("Presidential_form");
+	Intern	SomeRandomIntern;
+	AForm	*rrf;
 
-	std::cout << bureaucrat_1 << std::endl;
-	std::cout << bureaucrat_2 << std::endl;
-	std::cout << bureaucrat_3 << std::endl;
-	std::cout << bureaucrat_4 << std::endl;
-	bureaucrat_1.signForm(*shrubbery_form);
-	bureaucrat_2.signForm(*shrubbery_form);
-	bureaucrat_3.signForm(*shrubbery_form);
-	bureaucrat_4.signForm(*shrubbery_form);
-	
-	bureaucrat_1.signForm(*robotomy_form);
-	bureaucrat_2.signForm(*robotomy_form);
-	bureaucrat_3.signForm(*robotomy_form);
-	bureaucrat_4.signForm(*robotomy_form);
-
-	bureaucrat_1.signForm(*presidential_form);
-	bureaucrat_2.signForm(*presidential_form);
-	bureaucrat_3.signForm(*presidential_form);
-	bureaucrat_4.signForm(*presidential_form);
-
-	bureaucrat_1.executeForm(*shrubbery_form);
-	bureaucrat_2.executeForm(*shrubbery_form);
-	bureaucrat_3.executeForm(*shrubbery_form);
-	bureaucrat_4.executeForm(*shrubbery_form);
-	
-	bureaucrat_1.executeForm(*robotomy_form);
-	bureaucrat_2.executeForm(*robotomy_form);
-	bureaucrat_2.executeForm(*robotomy_form);
-	bureaucrat_2.executeForm(*robotomy_form);
-	bureaucrat_2.executeForm(*robotomy_form);
-	bureaucrat_3.executeForm(*robotomy_form);
-	bureaucrat_4.executeForm(*robotomy_form);
-	
-	bureaucrat_1.executeForm(*presidential_form);
-	bureaucrat_2.executeForm(*presidential_form);
-	bureaucrat_3.executeForm(*presidential_form);
-	bureaucrat_4.executeForm(*presidential_form);
+	rrf = SomeRandomIntern.makeForm("robotomy request", "Bender");
+	if (rrf != NULL)
+		std::cout << *rrf << std::endl;
+	delete(rrf);
 }

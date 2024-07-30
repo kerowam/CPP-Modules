@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 18:40:27 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/07/30 18:53:10 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/07/30 20:19:58 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Intern
 
 		Intern&	operator=(const Intern& intern);
 
-		AForm*	MakeForm(std::string& form_name, std::string& target);	
-}
+		AForm*	makeForm(const std::string& form_name, const std::string& target);	
+};
 
 #endif

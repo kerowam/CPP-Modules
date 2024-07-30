@@ -6,18 +6,18 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 18:42:02 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/07/30 17:35:04 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/07/30 19:54:31 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm(): AForm("Robotomy Request Form", 72, 45)
+RobotomyRequestForm::RobotomyRequestForm(): AForm("Robotomy_Request_Form", 72, 45)
 {
 	this->_target = "Default";
 }
 
-RobotomyRequestForm::RobotomyRequestForm(const std::string& target): AForm("Robotomy Request Form", 72, 45)
+RobotomyRequestForm::RobotomyRequestForm(const std::string& target): AForm("Robotomy_Request_Form", 72, 45)
 {
 	this->_target = target;
 }
