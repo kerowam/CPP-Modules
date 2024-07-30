@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 14:26:38 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/07/26 21:05:48 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/07/30 18:07:30 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ Form::Form(std::string name, int sign_grade_required, int exec_grade_required)
 	catch(const std::exception& e)
 	{
 		if (sign_grade_required < 1 || sign_grade_required > 150)
-			std::cerr << e.what() << sign_grade_required << std::endl;
+			std::cerr << e.what() << name << ": " << sign_grade_required << std::endl;
 		else if (exec_grade_required < 1 || exec_grade_required > 150)
-			std::cerr << e.what() << exec_grade_required << std::endl;
+			std::cerr << e.what() << name << ": " << exec_grade_required << std::endl;
 		/*else if (sign_grade_required > 150)
 			std::cerr << e.what() << sign_grade_required << std::endl;
 		else
@@ -92,12 +92,12 @@ void	Form::beSigned(const Bureaucrat& instance)
 	try
 	{
 		if (instance.getGrade() > this->getSignGradeRequired())
-			throw Form::GradeTooLowException();
+			throw Form::GradeTooHighException();
 		this->_is_signed = true;
 	}
 	catch (const std::exception& e)
 	{
-		std::cerr << e.what() << instance.getGrade() << std::endl;
+		std::cerr << e.what() << instance.getName() << ": " << instance.getGrade() << std::endl;
 	}
 }
 
