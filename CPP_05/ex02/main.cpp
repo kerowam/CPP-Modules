@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 17:52:53 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/07/30 19:06:15 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/07/30 19:12:19 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ int	main(void)
 	Bureaucrat	bureaucrat_2("Luis", 1);
 	Bureaucrat	bureaucrat_3("Pepe", 200);
 	Bureaucrat	bureaucrat_4("Patri", 75);
-	AForm		*shrubbery_form = new ShrubberyCreationForm("Shrubbery_form");
-	AForm		*robotomy_form = new RobotomyRequestForm("Robotomy_form");
-	AForm		*presidential_form = new PresidentialPardonForm("Presidential_form");
+	AForm		*shrubbery_form = new ShrubberyCreationForm("Creation");
+	AForm		*robotomy_form = new RobotomyRequestForm("Request");
+	AForm		*presidential_form = new PresidentialPardonForm("Pardon");
 
 	std::cout << bureaucrat_1 << std::endl;
 	std::cout << bureaucrat_2 << std::endl;
