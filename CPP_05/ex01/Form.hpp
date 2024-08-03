@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 14:26:16 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/07/26 21:05:28 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/08/03 18:47:57 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,11 @@ class Form
 		};
 
 		class GradeTooLowException: public std::exception
+		{
+			public:
+				const char*	what()const	throw();
+		};
+		class InvalidForm: public std::exception
 		{
 			public:
 				const char*	what()const	throw();

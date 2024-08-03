@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 17:52:53 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/07/30 17:59:46 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/08/03 18:15:36 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,17 @@ int	main(void)
 	std::cout << bureaucrat_2 << std::endl;
 	std::cout << bureaucrat_3 << std::endl;
 	std::cout << bureaucrat_4 << std::endl;
+
+	std::cout << form_1 << std::endl;
+	std::cout << form_2 << std::endl;
+	std::cout << form_3 << std::endl;
+
 	bureaucrat_1.signForm(form_1);
 	bureaucrat_2.signForm(form_1);
 	bureaucrat_3.signForm(form_1);
 	bureaucrat_4.signForm(form_1);
 	
+	std::cout << form_1 << std::endl;
+	std::cout << form_2 << std::endl;
+	std::cout << form_3 << std::endl;
 }
