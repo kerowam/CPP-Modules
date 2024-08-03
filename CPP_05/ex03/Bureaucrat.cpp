@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 17:54:13 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/07/30 18:21:20 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/08/03 19:35:23 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,19 @@ Bureaucrat::Bureaucrat(const std::string name, int grade): _name(name), _grade(g
 	try
 	{
 		if (grade > 150)
+		{
+			this->_grade = 150;
 			throw Bureaucrat::GradeTooLowException();
+		}
 		else if (grade < 1)
+		{
+			this->_grade = 150;
 			throw Bureaucrat::GradeTooHighException();
+		}
 	}
 	catch(std::exception& e)
 	{
-		std::cerr << e.what() << name << ": " << grade << std::endl;
+		std::cerr << e.what() << this->getName() << ": " << grade << std::endl;
 	}
 }
 
@@ -68,7 +74,7 @@ void	Bureaucrat::increment()
 	}
 	catch(std::exception& e)
 	{
-		std::cerr << e.what() << this->getGrade() << std::endl;
+		std::cerr << e.what() << this->getName() << ": " << this->getGrade() << std::endl;
 	}
 }
 
@@ -82,7 +88,7 @@ void	Bureaucrat::decrement()
 	}
 	catch(std::exception& e)
 	{
-		std::cerr << e.what() << this->getGrade() << std::endl;
+		std::cerr << e.what() << this->getName() << ": " << this->getGrade() << std::endl;
 	}
 }
 

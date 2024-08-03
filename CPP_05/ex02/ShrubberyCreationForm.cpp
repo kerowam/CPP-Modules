@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 18:40:42 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/07/30 19:11:07 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/08/03 19:39:11 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm() {}
 ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationForm& instance)
 {
 	if (this != &instance)
-	{
 		this->_target = instance._target;
-		//this->_is_signed = instance.getIsSigned(); // ???
-	}
 	return *this;
 }
 
@@ -84,7 +81,6 @@ void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 	}
 	catch (const std::exception &e)
 	{
-		//throw ShrubberyCreationForm::ThrowError();
 		std::cerr << e.what() << std::endl;
 	}
 }

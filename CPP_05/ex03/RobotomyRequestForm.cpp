@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 18:42:02 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/07/30 19:54:31 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/08/03 19:40:36 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,7 @@ RobotomyRequestForm::~RobotomyRequestForm() {}
 RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& instance)
 {
 	if (this != &instance)
-	{
 		this->_target = instance._target;
-		//this->_is_signed = instance.getIsSigned(); // ???
-	}
 	return *this;
 }
 

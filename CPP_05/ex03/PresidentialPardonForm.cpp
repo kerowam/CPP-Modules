@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 18:43:06 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/07/30 19:54:48 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/08/03 19:40:26 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,7 @@ PresidentialPardonForm::~PresidentialPardonForm() {}
 PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPardonForm& instance)
 {
 	if (this != &instance)
-	{
 		this->_target = instance._target;
-		//this->_is_signed = instance.getIsSigned(); // ???
-	}
 	return *this;
 }
 

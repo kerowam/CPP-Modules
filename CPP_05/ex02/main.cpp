@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 17:52:53 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/07/30 19:12:19 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/08/03 19:33:09 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,11 @@ int	main(void)
 	std::cout << bureaucrat_2 << std::endl;
 	std::cout << bureaucrat_3 << std::endl;
 	std::cout << bureaucrat_4 << std::endl;
+
+	std::cout << *shrubbery_form << std::endl;
+	std::cout << *robotomy_form << std::endl;
+	std::cout << *presidential_form << std::endl;
+
 	bureaucrat_1.signForm(*shrubbery_form);
 	bureaucrat_2.signForm(*shrubbery_form);
 	bureaucrat_3.signForm(*shrubbery_form);
@@ -44,6 +49,10 @@ int	main(void)
 	bureaucrat_2.signForm(*presidential_form);
 	bureaucrat_3.signForm(*presidential_form);
 	bureaucrat_4.signForm(*presidential_form);
+
+	std::cout << *shrubbery_form << std::endl;
+	std::cout << *robotomy_form << std::endl;
+	std::cout << *presidential_form << std::endl;
 
 	bureaucrat_1.executeForm(*shrubbery_form);
 	bureaucrat_2.executeForm(*shrubbery_form);
