@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 18:40:42 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/08/03 19:41:06 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/08/03 20:05:55 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,32 +51,32 @@ void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 		if (file.fail() == true)
 			throw ShrubberyCreationForm::ThrowError();
 		file << "CPP_Modules/" << std::endl;
-		file << "|_ CPP_05/" << std::endl;
-		file << "  |- ex00/" << std::endl;
-		file << "  |  |- Bureaucrat.cpp" << std::endl;
-		file << "  |  |- Bureaucrat.hpp" << std::endl;
-		file << "  |  |- main.cpp" << std::endl;
-		file << "  |  |_ Makefile" << std::endl;
-		file << "  |- ex01/" << std::endl;
-		file << "  |  |- Bureaucrat.cpp" << std::endl;
-		file << "  |  |- Bureaucrat.hpp" << std::endl;
-		file << "  |  |- Form.cpp" << std::endl;
-		file << "  |  |- Form.hpp" << std::endl;
-		file << "  |  |- main.cpp" << std::endl;
-		file << "  |  |_ Makefile" << std::endl;
-		file << "  |_ ex02/" << std::endl;
-		file << "     |- AForm.cpp" << std::endl;
-		file << "     |- AForm.hpp" << std::endl;
-		file << "     |- Bureaucrat.cpp" << std::endl;
-		file << "     |- Bureaucrat.hpp" << std::endl;
-		file << "     |- main.cpp" << std::endl;
-		file << "     |- Makefile" << std::endl;
-		file << "     |- PresidentialPardonForm.cpp" << std::endl;
-		file << "     |- PresidentialPardonForm.hpp" << std::endl;
-		file << "     |- RobotomyRequestForm.cpp" << std::endl;
-		file << "     |- RobotomyRequestForm.hpp" << std::endl;
-		file << "     |- ShrubberyCreationForm.cpp" << std::endl;
-		file << "     |_ ShrubberyCreationForm.hpp" << std::endl;
+		file << "└ CPP_05/" << std::endl;
+		file << "  ├ ex00/" << std::endl;
+		file << "  |  ├ Bureaucrat.cpp" << std::endl;
+		file << "  |  ├ Bureaucrat.hpp" << std::endl;
+		file << "  |  ├ main.cpp" << std::endl;
+		file << "  |  └ Makefile" << std::endl;
+		file << "  |-ex01/" << std::endl;
+		file << "  |  ├ Bureaucrat.cpp" << std::endl;
+		file << "  |  ├ Bureaucrat.hpp" << std::endl;
+		file << "  |  ├ Form.cpp" << std::endl;
+		file << "  |  ├ Form.hpp" << std::endl;
+		file << "  |  ├ main.cpp" << std::endl;
+		file << "  |  └ Makefile" << std::endl;
+		file << "  └ ex02/" << std::endl;
+		file << "     ├ AForm.cpp" << std::endl;
+		file << "     ├ AForm.hpp" << std::endl;
+		file << "     ├ Bureaucrat.cpp" << std::endl;
+		file << "     ├ Bureaucrat.hpp" << std::endl;
+		file << "     ├ main.cpp" << std::endl;
+		file << "     ├ Makefile" << std::endl;
+		file << "     ├ PresidentialPardonForm.cpp" << std::endl;
+		file << "     ├ PresidentialPardonForm.hpp" << std::endl;
+		file << "     ├ RobotomyRequestForm.cpp" << std::endl;
+		file << "     ├ RobotomyRequestForm.hpp" << std::endl;
+		file << "     ├ ShrubberyCreationForm.cpp" << std::endl;
+		file << "     └ ShrubberyCreationForm.hpp" << std::endl;
 		file.close();
 	}
 	catch (const std::exception &e)

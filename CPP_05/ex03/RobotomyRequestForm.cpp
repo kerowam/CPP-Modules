@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 18:42:02 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/08/03 19:40:36 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/08/03 19:48:29 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,13 @@ RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& i
 
 void	RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
+	long	nbr;
+	
 	if (!this->getIsSigned())
 		std::cerr << "Form must be signed to execute!" << std::endl;
 	if (executor.getGrade() > this->getExecGradeRequired())
 		throw Bureaucrat::GradeTooLowException();
-	std::srand((long)this);
+	std::srand(nbr);
 	if (std::rand() % 2 == 0)
 	{
 		std::cout << "A drilling noise is heard!" << std::endl;
