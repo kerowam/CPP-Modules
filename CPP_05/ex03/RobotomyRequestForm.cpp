@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 18:42:02 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/08/03 19:48:29 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/08/03 20:30:18 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,4 @@ void	RobotomyRequestForm::execute(Bureaucrat const & executor) const
 		std::cout << this->_target << " has been robotomized successfully." << std::endl;
 	} else
 		std::cout << this->_target << " robotomization failed." << std::endl;
-
 }
