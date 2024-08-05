@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 20:11:48 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/08/05 18:39:44 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/08/05 18:52:29 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -168,9 +168,9 @@ void	ScalarConverter::convert(const std::string& str)
 		{
 			std::cout << "float:\timpossible" << std::endl;
 			if (toDouble - static_cast<int>(toDouble) == 0)
-				std::cout << "double:\t" << static_cast<double>(toFloat) << ".0" << std::endl;
+				std::cout << "double:\t" << toDouble << ".0" << std::endl;
 			else
-				std::cout << "double:\t" << static_cast<double>(toFloat) << std::endl;
+				std::cout << "double:\t" << toDouble << std::endl;
 		}
 		else if (toDouble - static_cast<int>(toDouble) == 0)
 		{
