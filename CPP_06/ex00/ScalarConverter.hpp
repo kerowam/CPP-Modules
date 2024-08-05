@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 20:11:32 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/08/03 20:26:59 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/08/05 14:52:45 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define SCALARCONVERTER_HPP
 # include <iostream>
 # include <string>
+# include <limits>
 
 class ScalarConverter
 {
@@ -25,6 +26,6 @@ class ScalarConverter
 
 	public:
 		static void	convert(const std::string& str);
-}
+};
 
 #endif
