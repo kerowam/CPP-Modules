@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 20:10:40 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/08/06 19:21:44 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/08/07 18:11:39 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,5 +76,6 @@ int	main(void)
 
 	identify(base);
 	identify(*base);
+	delete(base);
 	return 0;
 }
