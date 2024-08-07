@@ -6,11 +6,11 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 17:02:03 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/08/07 17:55:52 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/08/07 18:00:33 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FunctionTemplates.hpp"
+#include "functionTemplates.hpp"
 
 int	main(void)
 {
