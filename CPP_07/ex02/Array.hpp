@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 18:51:24 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/08/07 22:42:56 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/08/08 14:16:47 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define ARRAY_HPP
 # include <iostream>
 # include <exception>
-# include "Array.tpp"
 
 template <typename T>
 
@@ -63,14 +62,14 @@ class Array
 			return *this;
 		}*/
 
-		T&				operator[](const unsigned int i);
+		T&				operator[](const unsigned int i)const;
 		/*{
 			if(i > (this->_size - 1))
 				throw Array<T>::OutOfBoundsException();
 			return this->_array[i];
 		}*/
 
-		unsigned int	size();
+		unsigned int	size() const;
 		/*{
 			return this->_size;
 		}*/
@@ -85,5 +84,6 @@ class Array
 		};
 
 };
+# include "Array.tpp"
 
 #endif
