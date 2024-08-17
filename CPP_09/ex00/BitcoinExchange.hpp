@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 14:56:03 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/08/16 23:29:44 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/08/17 15:11:22 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <string>
 # include <fstream>
 # include <sstream>
+# include <cctype>
 
 class BitcoinExchange
 {
@@ -32,7 +33,7 @@ class BitcoinExchange
 
 		BitcoinExchange& operator=(const BitcoinExchange& bitcoinExchange);
 		
-		void	getBtcprices(std::string fileName);
+		void	getBtcPrices(std::string fileName);
 };
 
 #endif
