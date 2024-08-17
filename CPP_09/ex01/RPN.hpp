@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 18:57:07 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/08/17 19:06:25 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/08/17 20:01:19 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define RPN_HPP
 # include <iostream>
 # include <stack>
+# include <string>
 
 class RPN
 {
@@ -30,6 +31,6 @@ class RPN
 		
 		RPN&	operator=(const RPN& rpn);
 		void	calculate();
-}
+};
 
 #endif
