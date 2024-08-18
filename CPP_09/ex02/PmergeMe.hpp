@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 20:12:28 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/08/18 22:35:33 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/08/19 00:34:51 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <limits>
 # include <sys/time.h>
 # include <iomanip>
+# include <iterator>
 
 class PmergeMe
 {

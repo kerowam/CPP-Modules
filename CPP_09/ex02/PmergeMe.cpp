@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 20:11:59 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/08/18 23:15:41 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/08/19 01:27:15 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ PmergeMe::PmergeMe(std::string args): _args(args)
 				std::cerr << "Error: invalid args. Number greater than maximum integer." << std::endl;
 				exit(1);
 			}
+			_vector.push_back(nbr);
+			_list.push_back(nbr);
 			if(!args[i])
 				break ;
 		}
@@ -85,11 +87,8 @@ static void	vectorMerge(std::vector<int>& v, std::vector<int>& leftVector, std::
 	std::vector<int>::iterator	leftIt = leftVector.begin();
 	std::vector<int>::iterator	rightIt = rightVector.begin();
 
-	//std::cout << "Init vectorMerge" << std::endl;
 	while(leftIt != leftVector.end() && rightIt != rightVector.end())
 	{
-		//std::cout << "leftIt: " << *leftIt << std::endl;
-		//std::cout << "rightIt: " << *rightIt << std::endl;
 		if (*leftIt < *rightIt)
 		{
 			*vIt = *leftIt;
@@ -100,24 +99,20 @@ static void	vectorMerge(std::vector<int>& v, std::vector<int>& leftVector, std::
 			*vIt = *rightIt;
 			rightIt++;
 		}
-		//std::cout << "vIt: " << *vIt << std::endl;
 		vIt++;
 	}
 	while (leftIt != leftVector.end())
 	{
 		*vIt = *leftIt;
-		//std::cout << "vIt: " << *vIt << std::endl;
 		vIt++;
 		leftIt++;
 	}
 	while (rightIt != rightVector.end())
 	{
 		*vIt = *rightIt;
-		//std::cout << "vIt: " << *vIt << std::endl;
 		vIt++;
 		rightIt++;
 	}
-	//std::cout << "End vectorMerge" << std::endl;
 }
 
 static void	vectorMergeInsertSort(std::vector<int>& v)
@@ -129,9 +124,7 @@ static void	vectorMergeInsertSort(std::vector<int>& v)
 	std::vector<int>	leftVector(v.begin(), v.begin() + middle);
 	std::vector<int>	rightVector(v.begin() + middle, v.end());
 
-	//printVector(leftVector);
 	vectorMergeInsertSort(leftVector);
-	//printVector(rightVector);
 	vectorMergeInsertSort(rightVector);
 	vectorMerge(v, leftVector, rightVector);
 }
@@ -141,6 +134,7 @@ void	PmergeMe::sortVector()
 	struct timeval	startTime;
 	struct timeval	endTime;
 	
+	_vector.clear();
 	gettimeofday(&startTime, NULL);
 	for (int i = 0; _args[i]; i++)
 	{
@@ -162,13 +156,65 @@ void	PmergeMe::sortVector()
 				break ;
 		}
 	}
-	std::cout << "Before: ";
-	printVector();
+	//std::cout << "Before: ";
+	//printVector();
 	vectorMergeInsertSort(_vector);
 	gettimeofday(&endTime, NULL);
 	//std::cout << "After: ";
-	//printVector(_vector);
+	//printVector();
 	_vectorTime = (endTime.tv_sec - startTime.tv_sec) * 1000000 + (endTime.tv_usec - startTime.tv_usec);
+}
+
+static void	listMerge(std::list<int>& l, std::list<int>& leftList, std::list<int>& rightList)
+{
+	std::list<int>::iterator	lIt = l.begin();
+	std::list<int>::iterator	leftIt = leftList.begin();
+	std::list<int>::iterator	rightIt = rightList.begin();
+
+	while(leftIt != leftList.end() && rightIt != rightList.end())
+	{
+		if (*leftIt < *rightIt)
+		{
+			*lIt = *leftIt;
+			leftIt++;
+		}
+		else
+		{
+			*lIt = *rightIt;
+			rightIt++;
+		}
+		lIt++;
+	}
+	while (leftIt != leftList.end())
+	{
+		*lIt = *leftIt;
+		lIt++;
+		leftIt++;
+	}
+	while (rightIt != rightList.end())
+	{
+		*lIt = *rightIt;
+		lIt++;
+		rightIt++;
+	}
+}
+
+static void	listMergeInsertSort(std::list<int>& l)
+{
+	if(l.size() < 2)
+		return ;
+
+	int							middle = l.size() / 2;
+	std::list<int>::iterator	lIt = l.begin();
+
+	std::advance(lIt, middle);
+	
+	std::list<int>	leftList(l.begin(), lIt);
+	std::list<int>	rightList(lIt, l.end());
+
+	listMergeInsertSort(leftList);
+	listMergeInsertSort(rightList);
+	listMerge(l, leftList, rightList);
 }
 
 void	PmergeMe::sortList()
@@ -176,6 +222,7 @@ void	PmergeMe::sortList()
 	struct timeval	startTime;
 	struct timeval	endTime;
 	
+	_list.clear();
 	gettimeofday(&startTime, NULL);
 	for (int i = 0; _args[i]; i++)
 	{
@@ -197,9 +244,17 @@ void	PmergeMe::sortList()
 				break ;
 		}
 	}
+	//std::cout << "Before: ";
+	//printList();
+	listMergeInsertSort(_list);
+	gettimeofday(&endTime, NULL);
+	//std::cout << "After: ";
+	//printList();
+	_listTime = (endTime.tv_sec - startTime.tv_sec) * 1000000 + (endTime.tv_usec - startTime.tv_usec);
 }
 
 void	PmergeMe::putTimers()
 {
 	std::cout << "Time to process a range of " << _vector.size() << " elements with std::vector " << _vectorTime << " us" << std::endl;
+	std::cout << "Time to process a range of " << _list.size() << " elements with std::list " << _listTime << " us" << std::endl;
 }

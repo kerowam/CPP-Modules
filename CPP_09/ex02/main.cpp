@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 20:11:26 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/08/19 00:06:09 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/08/19 01:26:08 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,16 @@ int	main(int argc, char **argv)
 		std::string	arg = argv[i];
 		args = args + " " + arg;
 	}
-	//std::cout << args << std::endl;
 	PmergeMe	pmerge(args);
+	std::cout << "Before: ";
+	pmerge.printVector();
+	//pmerge.printList();
+	//std::cout << "With vector:" << std::endl;
 	pmerge.sortVector();
+	//std::cout << "With list:" << std::endl;
 	pmerge.sortList();
 	std::cout << "After: ";
 	pmerge.printVector();
-	pmerge.printList();
+	//pmerge.printList();
 	pmerge.putTimers();
 }
