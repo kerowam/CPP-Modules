@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 20:12:28 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/08/18 15:10:45 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/08/18 22:35:33 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 # include <string>
 # include <vector>
 # include <list>
+# include <limits>
+# include <sys/time.h>
+# include <iomanip>
 
 class PmergeMe
 {
@@ -23,9 +26,12 @@ class PmergeMe
 		std::string			_args;
 		std::vector<int>	_vector;
 		std::list<int>		_list;
+		double				_vectorTime;
+		double				_listTime;
 
 		PmergeMe();
-	
+		//void	vectorMergeInsertSort(std::vector<int>& v);
+		//void	vectorMerge(std::vector<int>& v, std::vector<int>& leftVector, std::vector<int>& rightVector);
 	public:
 		~PmergeMe();
 		PmergeMe(const PmergeMe& pmerge);
@@ -33,13 +39,14 @@ class PmergeMe
 
 		PmergeMe&	operator=(const PmergeMe& pmerge);
 		
-		void	print(std::vector<int> &_vector);
-		void	print(std::list<int> &_list);
-		void	sort(std::vector<int> &_vector);
-		void	sort(std::list<int> &_list);
-		void	getTime(std::vector<int> &_vector);
-		void	getTime(std::list<int> &_list);
-
+		//void	printVector(std::vector<int>& _vector);
+		void	printVector();
+		void	printList();
+		//void	sort(std::vector<int> &_vector);
+		void	sortVector();
+		//void	sort(std::list<int> &_list);
+		void	sortList();
+		void	putTimers();
 };
 
 #endif
