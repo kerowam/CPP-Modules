@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 18:40:21 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/07/30 17:17:21 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/08/19 17:07:13 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@
 
 class ShrubberyCreationForm: public AForm
 {
+	private:
+		std::string	_target;
+
 	public:
 
 		ShrubberyCreationForm();

@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 14:26:16 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/08/03 19:36:31 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/08/20 01:34:14 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,12 @@ class AForm
 		const int			_sign_grade_required;
 		const int			_exec_grade_required;
 
-	protected:
-		std::string	_target;
-
 	public:
 		AForm();
 		AForm(std::string name, int sign_grade_required, int exec_grade_required);
 		AForm(const AForm& instance);
 		AForm& operator=(const AForm& instance);
-		~AForm();
+		virtual ~AForm();
 
 		const std::string	getName()const;
 		bool				getIsSigned()const;

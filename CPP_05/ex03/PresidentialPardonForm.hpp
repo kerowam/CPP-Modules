@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 18:42:46 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/07/30 17:05:58 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/08/19 17:06:52 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@
 
 class PresidentialPardonForm: public AForm
 {
+	private:
+		std::string	_target;
+
 	public:
 
 		PresidentialPardonForm();

@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 18:40:41 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/07/30 20:21:08 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/08/19 17:28:41 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ Intern&	Intern::operator=(const Intern& intern)
 AForm*	Intern::makeForm(const std::string& form_name, const std::string& target)
 {
 	AForm		*form_ptr[3] = {new ShrubberyCreationForm(target), new RobotomyRequestForm(target), new PresidentialPardonForm(target)};
-	std::string	forms_name[3] = {"shrubbery creation", "robotomy request", "presidential pardon"};
+	std::string	forms_name[3] = {form_ptr[0]->getName(), form_ptr[1]->getName(), form_ptr[2]->getName()};
 	int	i = 0;
 
 	for(; i < 3; i++)
