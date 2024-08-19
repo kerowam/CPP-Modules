@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 18:41:44 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/07/30 17:06:07 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/08/19 16:57:53 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@
 
 class RobotomyRequestForm: public AForm
 {
+	private:
+		std::string	_target;
+
 	public:
 
 		RobotomyRequestForm();
