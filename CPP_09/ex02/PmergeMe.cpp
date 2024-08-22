@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 20:11:59 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/08/19 01:27:15 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/08/22 13:16:02 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,7 +145,7 @@ void	PmergeMe::sortVector()
 			int		length = 0;
 			long	nbr;
 
-			while (_args[i] >= '0' && _args[i] <= '9')
+			while (isdigit(_args[i]))
 			{
 				length++;
 				i++;
@@ -233,7 +233,7 @@ void	PmergeMe::sortList()
 			int		length = 0;
 			long	nbr;
 
-			while (_args[i] >= '0' && _args[i] <= '9')
+			while (isdigit(_args[i]))
 			{
 				length++;
 				i++;

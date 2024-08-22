@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 18:56:48 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/08/17 20:07:43 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/08/22 13:04:12 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	RPN::calculate()
 	{
 		while (_math_expr[i] == ' ')
 			i++;
-		if (_math_expr[i] >= '0' && _math_expr[i] <= '9')
+		if (isdigit(_math_expr[i]))
 		{
 			if (_math_expr[i + 1] == ' ' || !_math_expr[i + 1])
 			{
