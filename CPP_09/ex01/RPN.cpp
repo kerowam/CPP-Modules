@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 18:56:48 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/08/22 13:04:12 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/08/24 10:58:03 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,9 +72,17 @@ void	RPN::calculate()
 			else if (_math_expr[i] == '*')
 				_stack.top() = _stack.top() * last_nbr;
 			else if (_math_expr[i] == '/')
-				_stack.top() = _stack.top() / last_nbr;
+			{
+				if (last_nbr != 0)
+					_stack.top() = _stack.top() / last_nbr;
+				else
+				{
+					std::cerr << "Error: cannot be divided by 0." << std::endl;			
+					return ;
+				}
+			}
 		}
-		else
+		else if (_math_expr[i])
 		{
 			std::cerr << "Error: invalid argument." << std::endl;
 			return ;

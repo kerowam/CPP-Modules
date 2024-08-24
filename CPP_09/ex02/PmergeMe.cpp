@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 20:11:59 by gfredes-          #+#    #+#             */
-/*   Updated: 2024/08/22 13:16:02 by gfredes-         ###   ########.fr       */
+/*   Updated: 2024/08/24 10:53:27 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ PmergeMe::PmergeMe(std::string args): _args(args)
 			int		length = 0;
 			long	nbr;
 
-			while (args[i] >= '0' && args[i] <= '9')
+			while (isdigit(args[i]))
 			{
 				length++;
 				i++;
